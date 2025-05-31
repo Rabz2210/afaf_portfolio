@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --color-dark-green: #18230f;
-  --color-forest: #27391c;
-  --color-olive: #255f38;
-  --color-sage: #1f7d53;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -20,21 +13,21 @@ body {
 }
 
 /* Custom scrollbar */
-.dark ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 8px;
 }
 
-.dark ::-webkit-scrollbar-track {
-  background: var(--color-dark-green);
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 
-.dark ::-webkit-scrollbar-thumb {
-  background: var(--color-forest);
+::-webkit-scrollbar-thumb {
+  background: #c7c7c7;
   border-radius: 4px;
 }
 
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-olive);
+::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
 }
 
 /* Section transitions */
@@ -43,8 +36,8 @@ section {
 }
 
 /* Focus styles */
-.dark :focus {
-  outline: 2px solid var(--color-sage);
+:focus {
+  outline: 2px solid rgba(99, 102, 241, 0.5);
   outline-offset: 2px;
 }
 
@@ -73,7 +66,7 @@ section {
   left: 0;
   width: 60px;
   height: 3px;
-  background-color: var(--color-sage);
+  background-color: #4f46e5;
 }
 
 /* Animation utilities */
@@ -172,65 +165,4 @@ section {
 
 .hover-scale:hover {
   transform: scale(1.05);
-}
-
-/* Dark theme specific styles */
-.dark {
-  @apply bg-darkGreen text-gray-200;
-}
-
-.dark .bg-white {
-  @apply bg-forest text-gray-200;
-}
-
-.dark .bg-gray-50 {
-  @apply bg-darkGreen;
-}
-
-.dark .bg-gray-100 {
-  @apply bg-forest;
-}
-
-.dark .text-gray-900 {
-  @apply text-gray-100;
-}
-
-.dark .text-gray-700 {
-  @apply text-gray-300;
-}
-
-.dark .text-gray-600 {
-  @apply text-gray-400;
-}
-
-.dark .border-gray-300 {
-  @apply border-gray-600;
-}
-
-.dark .shadow-md {
-  @apply shadow-sage/20;
-}
-
-.dark .bg-indigo-600 {
-  @apply bg-sage;
-}
-
-.dark .hover\:bg-indigo-700:hover {
-  @apply hover:bg-olive;
-}
-
-.dark .text-indigo-600 {
-  @apply text-sage;
-}
-
-.dark .hover\:text-indigo-800:hover {
-  @apply hover:text-olive;
-}
-
-.dark .bg-indigo-100 {
-  @apply bg-forest;
-}
-
-.dark .text-indigo-700 {
-  @apply text-sage;
 }
