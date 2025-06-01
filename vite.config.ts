@@ -7,6 +7,6 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  base: '/afaf_portfolio/',
+  base: '/',
   assetsInclude: ['**/*.pdf'],
 });
