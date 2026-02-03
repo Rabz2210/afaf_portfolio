@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
   Code, Database, LineChart, BrainCircuit, 
-  PenTool, GitBranch, Users
+  PenTool, GitBranch, Users, Sparkles
 } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
@@ -51,19 +51,19 @@ const Skills: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           <Skill 
             title="Programming Languages" 
-            items={['Python', 'R', 'SQL']}
+            items={['Python', 'R', 'SQL',]}
             icon={<Code />}
           />
           
           <Skill 
             title="Data Management" 
-            items={['PostgreSQL', 'MongoDB', 'MySQL', 'BigQuery', 'Snowflake']}
+            items={['MySQL', 'Snowflake']}
             icon={<Database />}
           />
           
           <Skill 
             title="Visualization" 
-            items={['Tableau', 'Power BI', 'D3.js', 'Matplotlib', 'Plotly']}
+            items={['Tableau', 'Power BI', 'Streamlit', 'Matplotlib', 'Plotly']}
             icon={<LineChart />}
           />
           
@@ -74,14 +74,38 @@ const Skills: React.FC = () => {
           />
           
           <Skill 
+            title="Generative AI" 
+            items={['GPT', 'Llama', 'Claude', 'LangChain', 'LangGraph', 'Pinecone', 'RAG']}
+            icon={<Sparkles />}
+          />
+          
+          <Skill 
+            title="Vector & Embeddings" 
+            items={['Chroma', 'OpenAI Embeddings', 'Sentence Transformers', 'FAISS']}
+            icon={<BrainCircuit />}
+          />
+          
+          <Skill 
+            title="Agent Frameworks" 
+            items={['CrewAI', 'Vertex AI', 'Langflow', 'Multi-agent Systems']}
+            icon={<Sparkles />}
+          />
+          
+          <Skill 
+            title="Multimodal AI" 
+            items={['ElevenLabs','Whisper', 'Text-to-Speech']}
+            icon={<Sparkles />}
+          />
+          
+          <Skill 
             title="Data Analysis" 
-            items={['Pandas', 'NumPy', 'SciPy', 'Jupyter', 'dplyr']}
+            items={['Pandas', 'NumPy', 'SciPy', 'dplyr','seaborn','statsmodels','plotly','ggplot2','tidyverse']}
             icon={<PenTool />}
           />
           
           <Skill 
             title="DevOps & Tools" 
-            items={['Git', 'Docker', 'AWS', 'Azure', 'CI/CD']}
+            items={['Git', 'Docker', 'AWS', 'CI/CD', 'Langsmith']}
             icon={<GitBranch />}
           />
           

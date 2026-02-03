@@ -1,6 +1,7 @@
 import React from 'react';
-import { Calendar, Briefcase } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
+import jaggaerLogo from '../assets/logos/jaggaer.svg';
 import rapidCanvasLogo from '../assets/logos/rapidcanvas.svg';
 import eatonLogo from '../assets/logos/eaton.svg';
 import powerSchoolLogo from '../assets/logos/powerschool.svg';
@@ -11,11 +12,12 @@ interface JobProps {
   company: string;
   companyUrl: string;
   period: string;
+  location: string;
   responsibilities: string[];
   logoSrc: string;
 }
 
-const Job: React.FC<JobProps> = ({ title, company, companyUrl, period, responsibilities, logoSrc }) => {
+const Job: React.FC<JobProps> = ({ title, company, companyUrl, period, location, responsibilities, logoSrc }) => {
   return (
     <ScrollReveal className="mb-12">
       <div className="flex flex-col md:flex-row md:items-center mb-4">
@@ -37,6 +39,7 @@ const Job: React.FC<JobProps> = ({ title, company, companyUrl, period, responsib
             >
               {company}
             </a>
+            <span className="text-gray-500 ml-2">• {location}</span>
           </div>
         </div>
         <div className="flex items-center md:ml-auto mt-2 md:mt-0">
@@ -68,40 +71,59 @@ const Experience: React.FC = () => {
 
         <div className="max-w-4xl mx-auto">
           <Job
-            title="DATA SCIENTIST"
-            company="Rapid Canvas"
+            title="Senior Data Scientist"
+            company="Jaggaer"
+            companyUrl="https://www.jaggaer.com"
+            period="Feb. 2025 – Present"
+            location="Hyderabad, India"
+            logoSrc={jaggaerLogo}
+            responsibilities={[
+              "Worked on LangSmith orchestrator and LangGraph to build an agent orchestrator for procurement domain that directs different user requests; implemented RAG system where agent runs and directs to nodes, retrieves chunks from Google Cloud Storage, ranks them (also experimented with Pinecone), and replies to users; tracked metrics including Faithfulness, Answer Relevancy, and Contextual Precision/Recall using RAGAs and DeepEval; integrated with GitHub for CI/CD pipeline automation",
+              "Architected a no-code automation workflow using n8n platform with REST API integration and event-driven email triggers for streamlined data processing pipelines",
+              "Developed an intelligent conversational agent leveraging Google Vertex AI platform for automated ticket booking functionality and e-commerce order management with natural language processing capabilities",
+              "Engineered a multilingual video localization system with automated translation capabilities for English-to-Italian, French, and Spanish conversion, implementing synchronized audio dubbing and subtitle generation",
+              "Built a real-time cost analytics dashboard using Streamlit framework integrated with AWS Cost Explorer API to monitor resource utilization and expenditure metrics for generative AI applications"
+            ]}
+          />
+
+          <Job
+            title="Data Scientist"
+            company="RapidCanvas"
             companyUrl="https://www.rapidcanvas.ai"
-            period="2022/OCT - Present"
+            period="Oct. 2022 – Nov. 2024"
+            location="Hyderabad, India"
             logoSrc={rapidCanvasLogo}
             responsibilities={[
-              "Led end-to-end machine learning projects from conception to deployment, resulting in significant business impact",
-              "Developed and implemented advanced analytics solutions using cutting-edge technologies",
-              "Collaborated with cross-functional teams to identify and solve complex business problems",
-              "Mentored junior data scientists and contributed to building a strong data-driven culture",
-              "Optimized existing machine learning models, improving accuracy by 25%"
+              "Designed and implemented a content-based recommendation system utilizing natural language processing and collaborative filtering techniques to deliver personalized book recommendations, enhancing customer engagement",
+              "Leveraged advanced statistical modeling techniques and data mining algorithms to construct a comprehensive credit risk assessment framework, enabling precise customer segmentation and informed decision-making for risk mitigation strategies",
+              "Implemented robust feature engineering pipelines for structured and unstructured data, improving model accuracy by 35% through advanced preprocessing techniques",
+              "Demonstrated proficiency in leveraging the Shopify platform, integrating machine learning models to build prediction services, and seamlessly writing back data to Shopify databases",
+              "Developed containerized machine learning applications using Docker, implementing CI/CD workflows for seamless model deployment and tracking",
+              "Conducted in-depth sales data analysis to uncover valuable insights, identifying customer behavior patterns and opportunities for targeted marketing campaigns"
             ]}
           />
 
           <Job
-            title="DATA SCIENTIST"
-            company="EATON"
+            title="Data Scientist"
+            company="Eaton"
             companyUrl="https://www.eaton.com/in/en-us.html"
-            period="2021/JUN - 2022/OCT"
+            period="Jun. 2021 – Oct. 2022"
+            location="Pune, India"
             logoSrc={eatonLogo}
             responsibilities={[
-              "Collaborated with stakeholders to gain insights for customer segmentation through feature engineering and clustering algorithms.",
-              "Performed comprehensive data visualization and published results on dashboards for stakeholder analysis.",
-              "Built automated scripts and pipelines to streamline the data processing workflow without manual intervention.",
-              "Optimized and maintained automated processes, ensuring scalability and adaptability to evolving business needs.",
-              "Fostered collaboration and knowledge-sharing across teams for successful implementation of data-driven solutions."
+              "Conducted advanced customer segmentation using sophisticated clustering algorithms and multi-dimensional feature engineering",
+              "Designed and deployed scalable machine learning pipelines using AWS SageMaker, improving predictive model performance and reducing processing time by 40%",
+              "Performed comprehensive data visualization and published results on dashboards for stakeholder analysis",
+              "Built automated ETL processes and data transformation scripts to streamline complex data workflows"
             ]}
           />
 
           <Job
-            title="DATA SCIENTIST (INTERN)"
+            title="Data Scientist (Intern)"
             company="PowerSchool"
             companyUrl="https://www.powerschool.com"
             period="2020/AUG - 2021/MAY"
+            location="Bengaluru, India"
             logoSrc={powerSchoolLogo}
             responsibilities={[
               "Contributed to the simplification and enhancement of the K-12 education system by conducting in-depth data analysis and generating actionable insights.",
@@ -113,10 +135,11 @@ const Experience: React.FC = () => {
           />
 
           <Job
-            title="ASSISTANT SYSTEM ENGINEER"
+            title="Assistant System Engineer"
             company="TCS"
             companyUrl="https://www.tcs.com"
             period="2018/MAR - 2019/JUL"
+            location="Noida, India"
             logoSrc={tcsLogo}
             responsibilities={[
               "Working with a team to streamline the Business requirement process",
