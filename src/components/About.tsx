@@ -28,29 +28,29 @@ const About: React.FC = () => {
             
             <ScrollReveal>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                A Gold Medalist in Masters of Big Data and Analytics with 4+ years of experience creating machine learning models for diverse industries. Passionate about data science and implementing innovative solutions from research papers.
+                Senior Data Scientist with 5+ years of experience building intelligent systems and ML solutions for procurement, e-commerce, and risk assessment domains. Specialized in RAG systems, agent orchestration, and generative AI applications.
               </p>
             </ScrollReveal>
             
             <ScrollReveal>
               <p className="text-gray-700 mb-6 leading-relaxed">
-                Inquisitive problem-solver driven by curiosity. Avid tea lover.
+                Passionate about implementing cutting-edge research in production, from LangGraph agents to multilingual AI systems. Gold Medalist in Big Data and Analytics. Avid tea lover and inquisitive problem-solver.
               </p>
             </ScrollReveal>
             
             <div className="space-y-4">
               {[
                 {
-                  title: "Machine Learning Expert",
-                  desc: "Creating and optimizing models"
+                  title: "AI Agent Development",
+                  desc: "LangGraph, LangSmith, RAG systems"
                 },
                 {
-                  title: "Data Analysis",
-                  desc: "Finding insights in complex datasets"
+                  title: "ML Engineering",
+                  desc: "CI/CD, Docker, Cloud Deployment"
                 },
                 {
-                  title: "Research Implementation",
-                  desc: "Turning papers into solutions"
+                  title: "Generative AI",
+                  desc: "LLMs, Vector DBs, RAG, LangChain, LangGraph"
                 }
               ].map((item, index) => (
                 <ScrollReveal key={index} className="flex items-center">
