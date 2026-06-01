@@ -79,6 +79,8 @@ const Experience: React.FC = () => {
             logoSrc={jaggaerLogo}
             responsibilities={[
               "Worked on LangSmith orchestrator and LangGraph to build an agent orchestrator for procurement domain that directs different user requests; implemented RAG system where agent runs and directs to nodes, retrieves chunks from Google Cloud Storage, ranks them (also experimented with Pinecone), and replies to users; tracked metrics including Faithfulness, Answer Relevancy, and Contextual Precision/Recall using RAGAs and DeepEval; integrated with GitHub for CI/CD pipeline automation",
+              "Built a production MCP tool layer for a 3PL logistics client, connecting HubSpot, order databases (MySQL/AS400), SharePoint reporting, and Microsoft Graph notifications, deployed on Azure Kubernetes with Helm/ArgoCD and CI-gated releases",
+              "Orchestrated multi-agent HubSpot workflows combining deterministic Python pipelines (order status, cancel-order, unified leadership/CSR report bundles) with Claude Agent SDK triage, including deduplication state, safety escalation rules, dry-run modes, and pytest coverage for pipeline gates",
               "Architected a no-code automation workflow using n8n platform with REST API integration and event-driven email triggers for streamlined data processing pipelines",
               "Developed an intelligent conversational agent leveraging Google Vertex AI platform for automated ticket booking functionality and e-commerce order management with natural language processing capabilities",
               "Engineered a multilingual video localization system with automated translation capabilities for English-to-Italian, French, and Spanish conversion, implementing synchronized audio dubbing and subtitle generation",
@@ -145,7 +147,7 @@ const Experience: React.FC = () => {
               "Working with a team to streamline the Business requirement process",
               "Analyzing the transactional data in the Fintech domain of the organization",
               "Setting client expectations on deliverables",
-              "Extracting and flagging Fraudulent data from DB server"
+              "Extracting and flagging Fraudulent data from servers and reporting to the client" 
             ]}
           />
         </div>

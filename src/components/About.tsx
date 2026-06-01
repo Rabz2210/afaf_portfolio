@@ -28,7 +28,7 @@ const About: React.FC = () => {
             
             <ScrollReveal>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Senior Data Scientist with 5+ years of experience building intelligent systems and ML solutions for procurement, e-commerce, and risk assessment domains. Specialized in RAG systems, agent orchestration, and generative AI applications.
+                Senior Data Scientist with 6.3+ years of experience building intelligent systems and ML solutions for procurement, e-commerce, and risk assessment domains. Specialized in RAG systems, agent orchestration, and generative AI applications.
               </p>
             </ScrollReveal>
             
