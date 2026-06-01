@@ -40,14 +40,14 @@ const Hero: React.FC = () => {
                 REACH OUT
               </Link>
               <Link
-                to="projects"
+                to="articles"
                 spy={true}
                 smooth={true}
                 offset={-70}
                 duration={500}
                 className="bg-white text-indigo-600 border border-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-indigo-50 transition-all hover-lift"
               >
-                View Projects
+                Read Articles
               </Link>
             </div>
           </div>
