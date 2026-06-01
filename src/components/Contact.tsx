@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Linkedin, Github, Download } from 'lucide-react';
+import resumePdf from '../assets/resume/Afaf_Athar_ML.pdf';
 
 const Contact: React.FC = () => {
   return (
@@ -17,7 +18,7 @@ const Contact: React.FC = () => {
             <div className="flex justify-between items-start mb-6">
               <h3 className="text-2xl font-bold">Contact Information</h3>
               <a 
-                href="/Afaf_Athar_ML.pdf"
+                href={resumePdf}
                 download="Afaf_Athar_Resume.pdf"
                 className="flex items-center bg-white/20 px-4 py-2 rounded-full hover:bg-white/30 transition-colors"
               >
