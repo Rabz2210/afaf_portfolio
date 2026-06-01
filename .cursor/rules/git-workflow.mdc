@@ -1,0 +1,25 @@
+---
+description: Git branch, merge, and deploy workflow for this portfolio repo
+alwaysApply: true
+---
+
+# Portfolio git workflow
+
+## Working branch
+
+- Default branch for all edits and commits: **`portfolio-update-by-afaf`**.
+- Before making changes, ensure the repo is on `portfolio-update-by-afaf` (`git checkout portfolio-update-by-afaf` if needed).
+- Do **not** `git checkout main` or other branches unless the user explicitly asks.
+
+## Main and deploy
+
+- The user merges **`portfolio-update-by-afaf` → `main`** (e.g. via PR). Do **not** merge into `main`, push `main`, or open/merge PRs unless the user explicitly requests it.
+- Production site is **`gh-pages`** via `npm run deploy` from **`main`** after merge. Do **not** run `npm run deploy` unless the user explicitly asks (after they have merged to `main`).
+
+## Push
+
+- Push feature work to **`origin portfolio-update-by-afaf`** when the user asks to push, unless they specify otherwise.
+
+## Resume PDF
+
+- Source of truth: **`src/assets/resume/Afaf_Athar_ML.pdf`**, imported in `Contact.tsx`. Keep **`public/Afaf_Athar_ML.pdf`** in sync if it remains in the repo.
